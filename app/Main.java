@@ -34,7 +34,11 @@ public class Main {
                 // Fix: Closing the print statement correctly
                 for (Student s : manager.getAllStudents()) {
                     System.out.println("Name: " + s.getName() + " | GPA: " + s.getGpa());
-                }
+                } else if (choice == 3) {
+    System.out.println("\n--- University Dashboard ---");
+    System.out.println("Total Students: " + manager.getStudentCount());
+    System.out.printf("Average GPA: %.2f\n", manager.getAverageGPA());
+}
             } else {
                 System.out.println("Exiting System...");
                 break;

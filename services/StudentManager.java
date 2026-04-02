@@ -46,4 +46,16 @@ try (Scanner reader=new Scanner(file)){
 }catch(FileNotFoundException e){
 }
 }
+    public int getStudentCount() {
+        return students.size();
+    }
+
+    public double getAverageGPA() {
+        if (students.isEmpty()) return 0.0;
+        double sum = 0;
+        for (university.models.Student s : students) {
+            sum += s.getGpa();
+        }
+        return sum / students.size();
+    }
 }
